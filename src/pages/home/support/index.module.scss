@@ -1,0 +1,30 @@
+@import '../../../styles/global.scss';
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 2.8125rem 4rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.title {
+    color: $white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.support {
+    display: flex;
+    padding: 6rem 3.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/illustrations/home-2.avif) center / cover no-repeat;
+}

@@ -1,0 +1,42 @@
+@import '../../styles/global.scss';
+
+.sitemap {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.section {
+	margin-bottom: 2rem;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+.linksList {
+	list-style: none;
+	padding: 0;
+}
+
+.linksList li {
+	margin-bottom: 0.75rem;
+}
+
+.linksList a {
+	color: $black;
+	font-size: 1rem;
+	transition: color 0.2s;
+
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,97 @@
+
+@import '../../../../styles/global.scss';
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.button {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $black;
+    
+    padding: 0;
+    border: 0;
+    
+
+    cursor: pointer;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9375rem;
+}
+
+.icon {
+    display: flex;
+    width: 2.315rem;
+    height: 2.315rem;
+    aspect-ratio: 1/1;
+    padding: 0 0.625rem;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+
+
+    transition: linear 0.1s;
+
+    cursor: pointer;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.iconsContainer {
+    display: flex;
+    padding: 0.625rem;
+    align-items: center;
+    flex: 1 0 0;
+
+    border-radius: 0.9375rem;
+    border: 2px solid $black;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+
+    &.mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        align-self: stretch;
+    }
+}
+
+.social {
+    display: flex;
+    padding: 3rem 3.5rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    gap: 4rem;
+
+    &.mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        align-self: stretch;
+        padding: 1.5625rem 1.25rem;
+    }
+}

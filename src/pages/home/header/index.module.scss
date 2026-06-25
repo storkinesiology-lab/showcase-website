@@ -1,0 +1,74 @@
+@import '../../../styles/global.scss';
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $white;
+
+    text-align: left;
+    align-self: center;
+    flex: 1 0 0;
+
+
+    &.mobile {
+        flex: none;
+        font-size: 2.5rem;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.4375rem;
+    flex: 1 0 0;
+
+    p {
+        font-size: 0.875rem;
+        font-weight: 400;
+
+        color: $white;
+    }
+
+    .textContent {
+        display: flex;
+        padding: 1rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        align-self: stretch;
+        border-radius: 0.5rem;
+        background: rgba($black, 0.95);
+    }
+
+    &.mobile {
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+
+        flex: none;
+    }
+}
+
+.header {
+    display: flex;
+    height: 100vh;
+    padding: 0 3.75rem;
+    align-items: center;
+    align-self: stretch;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/illustrations/home-1.avif) center / cover no-repeat;
+
+    &.mobile {
+        padding: 0 1.25rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+}
+
+.acronym {
+    color: $green;
+}

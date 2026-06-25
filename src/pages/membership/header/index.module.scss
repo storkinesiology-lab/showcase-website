@@ -1,0 +1,52 @@
+@import '../../../styles/global.scss';
+
+.header {
+    display: flex;
+    height: 57.125rem;
+    padding: 0 34.375rem 0 3.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/illustrations/membership-1.avif) center / cover no-repeat;
+
+    h1 {
+        align-self: stretch;
+        color: $white;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: $white;
+        text-align: justify;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        align-self: stretch;
+    }
+
+    .description {
+        display: flex;
+        padding: 1rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        border-radius: 0.5rem;
+        background: rgba($black, 0.95);
+    }
+
+    &.mobile {
+        padding: 0 1.25rem;
+        align-items: flex-start;
+        gap: 3rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}

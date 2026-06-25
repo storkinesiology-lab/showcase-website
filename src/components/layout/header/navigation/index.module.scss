@@ -1,0 +1,30 @@
+@import '../../../../styles/global.scss';
+
+.navigation {
+    display: flex;
+    padding: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    background-color: transparent;
+    border-color: transparent;
+
+    transition: linear 0.1s;
+
+    cursor: pointer;
+    
+    font-weight: 400;
+    &.selected {
+        font-weight: 700;
+        opacity: 1 !important;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &.mobile {
+        font-size: 1rem;
+    }
+}

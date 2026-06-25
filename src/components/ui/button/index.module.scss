@@ -1,0 +1,80 @@
+@import '../../../styles/global.scss';
+
+.button {    
+    display: flex;
+    padding: 0.9375rem;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--button-size);
+    font-weight: 700;
+
+    border-radius: 0.3125rem;
+    border: 2px solid;
+
+    transition: linear 0.1s;
+
+    &.black {         
+        background-color: transparent;
+        color: $black;
+        border-color: $black;
+
+        &.selected {
+            background-color: $black;
+            color: $white;
+            img {
+                filter: invert(100%);
+            }
+        }
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+            cursor: pointer;
+            img {
+                filter: invert(100%);
+            }
+        }
+    }
+
+    &.white {
+        background-color: transparent;
+        color: $white;
+        border-color: $white;
+
+        &.selected {
+            background-color: $white;
+            color: $black;
+        }
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+            cursor: pointer;
+        }
+    }
+
+    &.green {         
+        background-color: transparent;
+        color: $green;
+        border-color: $green;
+
+        &.selected {
+            background-color: $green;
+            color: $black;
+            img {
+                filter: invert(100%);
+            }
+        }
+
+        &:hover {
+            background-color: $darkGreen;
+            border-color: $darkGreen;
+            color: $black;
+            cursor: pointer;
+            img {
+                filter: invert(100%);
+            }
+        }
+    }
+
+}

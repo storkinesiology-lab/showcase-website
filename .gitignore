@@ -1,0 +1,5 @@
+# Remove the node_modules directory from version control
+node_modules
+
+# Ignore DS_Store files created by macOS
+.DS_Store
