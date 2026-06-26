@@ -68,7 +68,7 @@ export const HomeOffer = (props : HomeOfferProps) => {
                             <h2 className={style.mobileExplanationTitle}>{itemsData[item].title}</h2>
                             <p className={style.mobileExplanationDescription} dangerouslySetInnerHTML={{ __html: itemsData[item].description }} />
                             <Button color="green" selected={true} onClick={() => navigate('/missions')}>
-                                {`Learn more about ${itemsData[item].title}`}
+                                {`Learn more about our missions`}
                             </Button>
                         </div>
                     </div>
