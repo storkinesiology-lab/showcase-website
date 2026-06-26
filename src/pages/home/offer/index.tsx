@@ -15,22 +15,27 @@ const itemsData: Record<Items, { title: string; description: string }> = {
     [Items.Sportrxiv]: {
         title: 'SportRxiv',
         description: 'It is the first community-led open-access repository dedicated to kinesiology and health research.<br/><br/>It is a platform that allows researchers to share their work and collaborate with others.',
+        link: 'https://sportrxiv.org/index.php/server'
     },
     [Items.CommunicationInKinesiology]: {
         title: 'Communications in Kinesiology (CiK)',
         description: 'Communications in Kinesiology is the official journal of STORK.<br/><br/>It champions rigorous, transparent research practices to enhance reproducibility and integrity across all domains related to movement sciences, including sports, exercise, physical activity, physiology, biomechanics, neuroscience, rehabilitation sciences, nutrition.<br/>It welcomes empirical work that prioritizes methodological soundness over positive results, fostering a new era of trustworthy scholarship.<br/><br/>It is free for both authors and readers. No fees, no paywalls. Just research, shared openly. Run by researchers, for researchers. We are lucky to have support from the University of Ottawa Library and the Free Journal Network to keep it free and growing.',
+        link: 'https://storkjournals.org/index.php/cik'
     },
     [Items.KinesiologyBooks]: {
         title: 'Kinesiology Books (K-Books)',
         description: 'Kinesiology Books offers comprehensive resources that support learning, research, and teaching in the movement sciences.<br/><br/>These open-access books promote transparency and reproducibility by making high-quality information freely available to students, educators, and researchers worldwide.',
+        link: 'https://kinesiologybooks.org/index.php/stork/index'
     },
     [Items.Webinars]: {
         title: 'Webinars',
         description: 'Webinars are a powerful tool for sharing knowledge and building community.<br/><br/>They allow researchers to connect with others in the field, share their work, and learn from each other in real-time.',
+        link: '/missions'
     },
     [Items.Workshops]: {
         title: 'Workshops',
         description: 'Workshops provide an interactive environment for researchers and practitioners to learn new skills, share techniques, and collaborate on projects in our fields.',
+        link: '/missions'
     },
 };
 
@@ -67,8 +72,8 @@ export const HomeOffer = (props : HomeOfferProps) => {
                         <div className={style.mobileExplanation}>
                             <h2 className={style.mobileExplanationTitle}>{itemsData[item].title}</h2>
                             <p className={style.mobileExplanationDescription} dangerouslySetInnerHTML={{ __html: itemsData[item].description }} />
-                            <Button color="green" selected={true} onClick={() => navigate('/missions')}>
-                                {`Learn more about our missions`}
+                            <Button color="green" selected={true} onClick={() => navigate(itemsData[item].link)}>
+                                {`Learn more about ${itemsData[item].title}`}
                             </Button>
                         </div>
                     </div>
@@ -94,8 +99,8 @@ export const HomeOffer = (props : HomeOfferProps) => {
                         <div className={style.explanation}>
                             <h2 className={style.explanationTitle}>{itemsData[item].title}</h2>
                             <p className={style.explanationDescription} dangerouslySetInnerHTML={{ __html: itemsData[item].description }} />
-                            <Button color="green" selected={true} onClick={() => navigate('/missions')}>
-                                {`Learn more about our missions`}
+                            <Button color="green" selected={true} onClick={() => navigate(itemsData[item].link)}>
+                                {`Learn more about ${itemsData[item].title}`}
                             </Button>
                         </div>
                     </div>
