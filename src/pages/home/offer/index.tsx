@@ -11,7 +11,7 @@ enum Items {
     Workshops = 'Workshops',
 }
 
-const itemsData: Record<Items, { title: string; description: string }> = {
+const itemsData: Record<Items, { title: string; description: string; link: string }> = {
     [Items.Sportrxiv]: {
         title: 'SportRxiv',
         description: 'It is the first community-led open-access repository dedicated to kinesiology and health research.<br/><br/>It is a platform that allows researchers to share their work and collaborate with others.',
@@ -46,6 +46,14 @@ type HomeOfferProps = {
 export const HomeOffer = (props : HomeOfferProps) => {
     const navigate = useNavigate();
     const [item, setItem] = useState<Items>(Items.Sportrxiv);
+
+    const goToLink = (link: string) => {
+        if (link.startsWith('/')) {
+            navigate(link);
+        } else {
+            window.open(link, '_blank');
+        }
+    };
     
     return (
         <div className={style.offer}>
@@ -72,7 +80,7 @@ export const HomeOffer = (props : HomeOfferProps) => {
                         <div className={style.mobileExplanation}>
                             <h2 className={style.mobileExplanationTitle}>{itemsData[item].title}</h2>
                             <p className={style.mobileExplanationDescription} dangerouslySetInnerHTML={{ __html: itemsData[item].description }} />
-                            <Button color="green" selected={true} onClick={() => navigate(itemsData[item].link)}>
+                            <Button color="green" selected={true} onClick={() => goToLink(itemsData[item].link)}>
                                 {`Learn more about ${itemsData[item].title}`}
                             </Button>
                         </div>
@@ -99,7 +107,7 @@ export const HomeOffer = (props : HomeOfferProps) => {
                         <div className={style.explanation}>
                             <h2 className={style.explanationTitle}>{itemsData[item].title}</h2>
                             <p className={style.explanationDescription} dangerouslySetInnerHTML={{ __html: itemsData[item].description }} />
-                            <Button color="green" selected={true} onClick={() => navigate(itemsData[item].link)}>
+                            <Button color="green" selected={true} onClick={() => goToLink(itemsData[item].link)}>
                                 {`Learn more about ${itemsData[item].title}`}
                             </Button>
                         </div>
